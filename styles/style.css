@@ -1,87 +1,193 @@
-/* Basic Reset */
-* {
-    margin: 0;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #272727;
+  color: #fafafa;
+  margin: 0;
+  padding: 30px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header-title{
+  display: flex;
+}
+.header-title h1{
+  text-align: center;
+}
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(53, 53, 53);
+  padding: 1vh 0;
+  border: solid 1px #fafafa;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin: 0 auto;
+  width: 15vw;
+}
+.header-nav a{
+  color: #fafafa;
+  text-decoration: none;
+  margin: 0 4px;
+}
+.personal{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 30px auto;
+  background-color: rgb(67, 66, 73);
+  padding: 30px;
+  border: solid transparent;
+  border-radius: 30px;
+}
+.personal-container{
+  display: flex;
+}
+.personal img{
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 1000px;
+  background-color: #1b1b1b;
+  margin-top: 50px;
+}
+.personal-description{
+  margin: auto;
+  padding: 0 40px;
+}
+.personal-icons-container{
+  display: flex;
+  justify-content: center;
+}
+.personal-icons-container a{
+  font-size: 2em;
+  text-decoration: none;
+  color: #fafafa;
+  margin: 5px;
+}
+.content{
+  display: flex;
+  background-color: rgb(31, 31, 31);
+  margin: 0 auto;
+  width: 50vw;
+  border-radius: 30px;
+  padding: 0 40px;
+}
+.content-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+.content-title{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.item-table{
+  display: flex;
+  flex-direction: column;
+}
+.item-row{
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+.item-row:hover{
+  background-color: rgb(67, 66, 73);
+
+}
+.item-img-container img{
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
+}
+.item-description-container{
+  margin-left: 20px;
+  padding: 5px 10px;
+}
+.item-description-container h3{
+  margin-top: -5px;
+}
+.item-description{
+  margin-top: -7px;
+  font-size: 0.8em;
+}
+
+@media (max-width: 700px){
+  body{
     padding: 0;
-    box-sizing: border-box;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
+
+  .personal{
+    padding: 0;
+    width: 90vw;
   }
-  
-  /* Header Styles */
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin-bottom: 0.5rem;
-  }
-  
-  nav ul {
-    list-style: none;
+
+  .personal-img-container{
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
   }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  .personal-container{
+    display: flex;
+    flex-direction: column;
   }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: #e2e2e2;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  /* Content Section */
-  .content {
-    padding: 2rem;
-    max-width: 800px;
+
+  .content{
     margin: 0 auto;
+    justify-content: center;
+    width: 70vw;
   }
-  
-  /* Footer */
-  footer {
-    background: #333;
-    color: #fff;
+  .item-row{
+    flex-direction: column;
+  }
+
+  .item-img-container img{
+    width: 200px;
+  }
+
+
+}
+@media (max-width: 1400px){
+  .personal{
+    width: 60vw
+  }
+  .content{
+    width: 75vw;
+  }
+
+  .personal-description-about{
+    margin-top: -10px;
+  }
+  .header-nav{
+    justify-content: center;
+    margin: 0 auto;
+    width: 60vw;
+    padding: 0;
+  }
+
+  .header-nav a{
+    margin: 0 1vw;
+  }
+
+}
+
+@media (max-width: 480px){
+  .personal-img-container img{
+    width: 150px;
+  }
+  .item-description-container{
+    margin: 0;
+  }
+  .item-description-container h3{
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
   }
-  
-  /* Dark Mode Styles */
-  body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+
+  .item-description{
+    text-align: center;
   }
-  
-  body.dark-mode header,
-  body.dark-mode footer {
-    background: #1e1e1e;
-  }
-  
-  /* Responsive Navigation */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-    }
-  }
-  
+}

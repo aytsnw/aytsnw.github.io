@@ -1,42 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles/style.css" />
-</head>
-<body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- Optional Dark Mode Toggle Button -->
-    <button id="darkModeBtn">Toggle Dark Mode</button>
-  </header>
-  
-  <section class="hero">
-    <h2>Welcome to My Portfolio</h2>
-    <p>
-      Hi, I'm a passionate developer. Check out my projects and get in touch!
-    </p>
-  </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Lucas Castagno</title>
+        <link rel="stylesheet" href="styles/style.css"/>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <div class="header-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="personal">
+                    <div class="personal-container">
+                        <div class="personal-img-container">
+                            <img src="src/self.png" width="270">
+                        </div>
+                        <div class="personal-description">
+                            <div class="header-title">
+                                <h1>Hi, I am Lucas Castagno!</h1>
+                            </div>
+                            <p class="personal-description-about">Aspiring <b>Software Engineer</b>. Currently an undergraduate student looking forward to full-time/internship positions. 
+                            Check out my projects and get in touch!</p>
+                        </div>
+                    </div>
+                    <div class="personal-icons-container">
+                        <a href="https://github.com/aytsnw"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/lucas-martin-castagno-de-oliveira-442302257"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <section class="content">
-    <h3>Latest Projects</h3>
-    <p>This section can showcase your latest work.</p>
-  </section>
-  
-  <footer>
-    <p>&copy; 2025 My Portfolio</p>
-  </footer>
+        <div class="content">
+            <div class="content-container">
+                <div class="content-title">
+                    <h1>Latest Projects</h1>
+                </div>
+                <div class="item-table">
+                    <form style="all: unset;" action="https://github.com/aytsnw/gamelist", method="get">
+                    <button class="item-row">
+                            <div class="item-img-container">
+                                <img src="src/gamelistv0.0.0.gif" width="400"></img>
+                            </div>
+                            <div class="item-description-container">
+                                <h3>Gamelist</h3>
+                                <p class="item-description">Gamelist is as web application in which the users are able to rate and 
+                                    review the games they have played, classifying them according to gameplay 
+                                    status (playing, finished or wishlist), as well as to have a look at how a 
+                                    given game is performimng review-wise amongst other Gamelist users and 
+                                    general game information.</p>
+                            </div>
+                    </button>
+                    </form>
+                    <form style="all: unset;" action="https://github.com/aytsnw/schedule" method="get">
+                    <button class="item-row">
+                        <div class="item-img-container">
+                            <img src="src/schedulev0.0.0.gif" width="400"></img>
+                        </div>
+                        <div class="item-description-container">
+                            <h3>Schedule</h3>
+                            <p class="item-description">This is a tkinter based desktop application of a schedule GUI, 
+                                costumized using customtkinter module. You can add tasks to 
+                                any day of the calendar, keep track of them, edit and set recurrency.</p>
+                        </div>
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            
+        </footer>
 
-  <script src="scripts/script.js"></script>
-</body>
+        <script src="scripts/script.js"></script>
+    </body>
 </html>
